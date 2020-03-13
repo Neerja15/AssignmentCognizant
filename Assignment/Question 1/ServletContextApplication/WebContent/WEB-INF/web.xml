@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+	<context-param>
+		<param-name>userName</param-name>
+		<param-value>root</param-value>
+	</context-param>
+
+	<context-param>
+		<param-name>password</param-name>
+		<param-value>ROOT</param-value>
+	</context-param>
+
+
+	<context-param>
+		<param-name>url</param-name>
+		<param-value>jdbc:mysql://localhost:3306/ctspune</param-value>
+	</context-param>
+	<context-param>
+
+		<param-name>driver</param-name>
+		<param-value>com.mysql.jdbc.Driver</param-value>
+	</context-param>
+	
+	
+	
+	<servlet>
+		<servlet-name>cs</servlet-name>
+		<servlet-class>com.cts.training.servlet.ConnectionServlet
+		</servlet-class>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>cs</servlet-name>
+		<url-pattern>/cs</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>cs2</servlet-name>
+		<servlet-class>com.cts.training.servlet.ConnectionServlet2
+		</servlet-class>
+
+	</servlet>
+
+	<servlet-mapping>
+		<servlet-name>cs2</servlet-name>
+		<url-pattern>/cs2</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>fs</servlet-name>
+		<servlet-class>com.cts.training.servlet.FormValidateServlet
+		</servlet-class>
+
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>fs</servlet-name>
+		<url-pattern>/fs</url-pattern>
+	</servlet-mapping>
+
+
+</web-app>
